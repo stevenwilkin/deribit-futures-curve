@@ -1,19 +1,30 @@
 # Deribit
 
-To start your Phoenix server:
+Visualisation of the Bitcoin futures curve on Deribit
 
-  * Install dependencies with `mix deps.get`
-  * Install Node.js dependencies with `npm install` inside the `assets` directory
-  * Start Phoenix endpoint with `mix phx.server`
+## Prerequisites
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+* [Elixir]
+* [Phoenix]
+* [Node.js][Node]
+* [NPM]
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## Installation
 
-## Learn more
+```sh
+$ mix deps.get
+$ pushd assets && npm install && popd
+```
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+## Usage
+
+```sh
+$ mix phx.server
+```
+
+Then browse to [http://0.0.0.0.0:4000](http://0.0.0.0.0:4000)
+
+[elixir]: https://elixir-lang.org
+[phoenix]: https://www.phoenixframework.org
+[node]: https://nodejs.org
+[npm]: https://www.npmjs.org
