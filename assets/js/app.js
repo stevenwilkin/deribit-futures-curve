@@ -18,6 +18,8 @@ import Chart from 'chart.js/auto';
 import 'chartjs-adapter-date-fns';
 import format from 'date-fns/format'
 
+Chart.defaults.color = Chart.defaults.borderColor = 'rgb(178, 178, 178)';
+
 var ctx = document.getElementById('chart').getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'line',
@@ -26,7 +28,17 @@ var myChart = new Chart(ctx, {
     scales: {
       x: {
         type: 'time',
+        grid: {
+          display: false,
+          drawBorder: false
+        }
       },
+      y: {
+        grid: {
+          display: false,
+          drawBorder: false
+        }
+      }
     },
     plugins: {
       legend: {
