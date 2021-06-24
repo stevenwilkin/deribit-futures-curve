@@ -1,7 +1,17 @@
-<%= for instrument <- @yields do %>
-  <%= instrument["instrument_name"] %>
-  <br>
-  <%= instrument["yield"] %>
-  <br>
-  <br>
-<% end %>
+<canvas id="chart"></canvas>
+  <%#= instrument["instrument_name"] %>
+
+<script>
+  var data = {
+    datasets: [{
+      data: [
+        <%= for instrument <- @yields do %>
+          {
+            x: new Date(<%= instrument["expiration_timestamp"] %>),
+            y: <%= :io_lib.format("~.2f", [instrument["yield"] * 100]) %>
+          },
+        <% end %>
+      ]
+    }]
+  };
+</script>
